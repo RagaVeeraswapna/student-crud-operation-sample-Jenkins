@@ -43,7 +43,7 @@ pipeline{
 		
 		stage(DockerBuild){
 			steps{
-				bat 'docker build -t student-crud-demo/student-crud-operations-sample:latest .'
+				bat 'Docker build -t student-crud-demo/student-crud-operations-sample:latest .'
 			}
 		}
 		
