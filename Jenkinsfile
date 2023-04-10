@@ -8,6 +8,18 @@ pipeline{
 			}
 			
 		}
+		stage('Clean') {
+           steps{
+               echo "######################## Cleaning the project"
+               bat 'mvn clean'
+           }
+        }
+        stage('Compile') {
+           steps{
+               echo "######################## Compile the project"
+               bat 'mvn compile'
+           }
+        }
 		
 		stage('Build'){
 			steps{
