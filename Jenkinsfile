@@ -30,7 +30,7 @@ pipeline{
 		
 		stage('Build'){
 			steps{
-				bat 'chmod a+x mvnw'
+				bat 'a+x mvnw'
 				bat './mvnw clean package -DskipTests=true' 
 			}
 			
