@@ -30,7 +30,7 @@ pipeline{
 		
 		stage('Build'){
 			steps{
-				bat 'a+x mvnw'
+				bat 'attrib a+x mvnw'
 				bat './mvnw clean package -DskipTests=true' 
 			}
 			
