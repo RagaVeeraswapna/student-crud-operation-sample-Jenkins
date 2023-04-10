@@ -30,8 +30,8 @@ pipeline{
 		
 		stage('Build'){
 			steps{
-				sh 'chmod a+x mvnw'
-				sh './mvnw clean package -DskipTests=true' 
+				bat 'chmod a+x mvnw'
+				bat './mvnw clean package -DskipTests=true' 
 			}
 			
 			post{
@@ -43,7 +43,7 @@ pipeline{
 		
 		stage(DockerBuild){
 			steps{
-				sh 'docker build -t student-crud-demo/student-crud-operations-sample:latest .'
+				bat 'docker build -t student-crud-demo/student-crud-operations-sample:latest .'
 			}
 		}
 		
